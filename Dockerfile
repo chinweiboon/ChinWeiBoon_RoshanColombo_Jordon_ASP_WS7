@@ -21,6 +21,8 @@ RUN apt install dotnet-sdk-3.0 -y
 
 COPY ./ ./
 
+RUN dotnet restore
+
 RUN dotnet build
 
 EXPOSE 5000:5000
